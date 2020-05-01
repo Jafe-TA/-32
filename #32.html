@@ -1,0 +1,32 @@
+<!--
+
+- Modificar el segundo problema resuelto (las casillas de la tabla que cambian el color cuando ingresamos con el mouse) 
+para permitir llamar mediante hipervínculos a distintos programas que administran web-mail (gmail, hotmail y yahoo)
+
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        function pintar(col) {
+            document.getElementById('cuadrado1').style.backgroundColor = col;
+        }
+    </script>
+    <div id="cuadrado1" style="background:#000;width:200px;height:200px"></div>
+
+</body>
+
+</html>
+
+Las llamadas a las funciones las hacemos inicializando las propiedades onMouseOver y onMouseOut:
+
+<a href="#" onMouseOver="pintar('#f00')" onMouseOut="pintar('#000')">gmail</a> -
+<a href="#" onMouseOver="pintar('#0f0')" onMouseOut="pintar('#000')">hotmail</a> -
+<a href="#" onMouseOver="pintar('#00f')" onMouseOut="pintar('#000')">yahoo</a>
